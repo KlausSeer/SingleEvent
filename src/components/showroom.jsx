@@ -1,6 +1,6 @@
 import StandList from "./standList";
 import React, { Component } from "react";
-import { Button, Typography, Container } from "@material-ui/core";
+import { Button, Typography, Container, Grid } from "@material-ui/core";
 class Showroom extends Component {
   state = {};
   render() {
@@ -14,7 +14,11 @@ class Showroom extends Component {
             backgroundColor: "#ebd234",
           }}
         >
-          <StandList></StandList>
+          <Grid container alignItem="center">
+            <Grid item>
+              <StandList></StandList>
+            </Grid>
+          </Grid>
         </Container>
       </React.Fragment>
     );

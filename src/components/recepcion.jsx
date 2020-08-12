@@ -1,6 +1,6 @@
 import ImageBackground from "./imageBackground";
 import React, { Component } from "react";
-import { Button, Typography, Container } from "@material-ui/core";
+import { Button, Typography, Container, Grid } from "@material-ui/core";
 
 class Recepcion extends Component {
   state = {};
@@ -15,8 +15,22 @@ class Recepcion extends Component {
             backgroundColor: "#ebd234",
           }}
         >
-          <Button>Auditorio</Button>
-          <Button>Showroom</Button>
+          <Grid container direction="column">
+            <Grid item>
+              <Grid container direction="row" alignItems="flex-start">
+                <Grid item>
+                  <Button>Auditorio</Button>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item>
+              <Grid container direction="row" alignItems="flex-end">
+                <Grid item>
+                  <Button>Showroom</Button>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
         </Container>
       </React.Fragment>
     );
